@@ -1,0 +1,144 @@
+/*
+**********************************************************************
+** Copyright (c) 1988-2021 $organization$     
+**
+** This software is provided by the author and contributors ``as is'' 
+** and any express or implied warranties, including, but not limited to, 
+** the implied warranties of merchantability and fitness for a particular 
+** purpose are disclaimed. In no event shall the author or contributors 
+** be liable for any direct, indirect, incidental, special, exemplary, 
+** or consequential damages (including, but not limited to, procurement 
+** of substitute goods or services; loss of use, data, or profits; or 
+** business interruption) however caused and on any theory of liability, 
+** whether in contract, strict liability, or tort (including negligence 
+** or otherwise) arising in any way out of the use of this software, 
+** even if advised of the possibility of such damage.
+**
+**   File: Belisariande-logo.css
+**
+** Author: $author$           
+**   Date: 3/25/2021
+**********************************************************************
+*/
+
+/*
+** logo
+** ...
+*/
+.logo-body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: transparent;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    position: absolute;
+    z-index: 0;
+}
+.body-logo {
+    width: 360px;
+    height: 360px;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    position: relative;
+}
+.logo {
+    width: 360px;
+    height: 360px;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.logo-ring { 
+    width: 360px;
+    height: 360px;
+    margin: auto;
+    background-color: gray;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border-radius: 330px;
+    cursor: pointer;
+}
+.logo-ring:hover {
+    background-color: BlueViolet;
+}
+
+.logo-circle { 
+    width: 330px;
+    height: 330px;
+    margin: auto;
+    background-color: black;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border-radius: 165px;
+}
+.logo-background { 
+    vertical-align: center;
+}
+.logo-background-background { 
+    width: 290px;
+    height: 290px;
+    margin: auto;
+    background-color: black;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border-radius: 145px;
+}
+.logo-icon {
+    height: 250px;
+    vertical-align: bottom;
+}
+.logo-icon-icon { 
+    width: 240px;
+    height: 240px;
+    margin: auto;
+    background-color: black;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border-radius: 90px;
+}
+.logo-icon-image {
+    background-image: url('../images/Belisariande.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    border-radius: 90px 90px 40px 60px;
+}
+.logo-label {
+    vertical-align: top;
+}
+.logo-label-label { 
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+}
+.logo-label-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: gray;
+    opacity: 0;
+    transition: .5s ease;                
+}
+.logo-label-text b {
+    color: lightgray;
+}
+.logo-ring:hover .logo-label-text b {
+    text-decoration: none;
+}
+.logo-ring:hover .logo-label-text {
+    text-decoration: none;
+    opacity: 1;
+}
+/*
+** ...
+** logo
+*/

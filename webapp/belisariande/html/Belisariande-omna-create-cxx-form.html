@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+=====================================================================
+=== Copyright (c) 1988-2021 $organization$
+===
+=== This software is provided by the author and contributors ``as is'' 
+=== and any express or implied warranties, including, but not limited to, 
+=== the implied warranties of merchantability and fitness for a particular 
+=== purpose are disclaimed. In no event shall the author or contributors 
+=== be liable for any direct, indirect, incidental, special, exemplary, 
+=== or consequential damages (including, but not limited to, procurement 
+=== of substitute goods or services; loss of use, data, or profits; or 
+=== business interruption) however caused and on any theory of liability, 
+=== whether in contract, strict liability, or tort (including negligence 
+=== or otherwise) arising in any way out of the use of this software, 
+=== even if advised of the possibility of such damage.
+===
+===   File: Belisariande-omna-create-cxx-form.html
+===
+=== Author: $author$
+===   Date: 3/30/2021
+=====================================================================
+-->
+<!--
+=====================================================================
+=== form
+=====================================================================
+-->
+<form name="Form" method="POST" action="../templates/t/cxx/hxx-cxx.t"
+ onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
+    <div class="form">
+
+    File: <input name="File" value=""/>
+    <input type="checkbox" name="is_File" value="no" unchecked="">no</input>
+    <input type="radio" name="Extension" value="hpp" checked="checked">.hpp</input>
+    <input type="radio" name="Extension" value="cpp">.cpp</input>
+    <input type="radio" name="Extension" value="hxx">.hxx</input>
+    <input type="radio" name="Extension" value="cxx">.cxx</input>
+    <input type="radio" name="Extension" value="hh">.hh</input>
+    <input type="radio" name="Extension" value="mm">.mm</input>
+    <input type="radio" name="Extension" value="h">.h</input>
+    <input type="radio" name="Extension" value="c">.c</input>
+    <input type="checkbox" name="is_Extension" value="no" unchecked="">no</input>
+    <br/>
+
+    Template: <select name="FormTemplate">
+    <option value="../templates/t/cxx/hxx-cxx.t">(../templates/t/cxx/hxx-cxx.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/t/parameters.t">t parameters</option>
+    <option value="../templates/t/t/functions.t">t functions</option>
+    <option value=""></option>
+    <option value="/belisariande-cgi/cgi">cgi parameters</option>
+    <option value="/belisariande-cgi/cgicatch">catch cgi parameters</option>
+    </select>
+    <br/>
+    <br/>
+
+    <b>#ifndef </b>
+    <input type="checkbox" name="File_ifndef_define_prefix" value="_" unchecked=""/>
+    <b>_</b><input name="File_ifndef" value=""/><b>_</b>
+    <input type="checkbox" name="File_ifndef_define_suffix" value="_" unchecked=""/>[%Namespace%]
+    <input type="checkbox" name="is_File_ifndef" value="no" unchecked=""/>no
+    <br/>
+
+    <b>#include "</b><input name="Include" value=""/><b>"</b>[xos/base/Base][.%Extension%]
+    <input type="checkbox" name="is_Include" value="no" unchecked=""/>no<br/>
+    <b>#include &lt;</b><input name="Sys_include" value=""/><b>&gt;</b>[string]
+    <input type="checkbox" name="is_Sys_include" value="no" checked="checked"/>no<br/>
+    <br/>
+            
+
+    <br/>
+    Content-Type: <select name="content_type">
+    <option value="text/plain">text</option>
+    <option value="text/html">html</option>
+    <option value="text/xml">xml</option>
+    <option value="application/json">json</option>
+    <option value="application/javascript">javascript</option>
+    <option value=""></option>
+    </select><br/>
+    Action: <select name="FormAction">
+    <option value="../templates/t/cxx/hxx-cxx.t">(../templates/t/cxx/hxx-cxx.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/t/functions.t">t functions</option>
+    <option value="../templates/t/t/parameters.t">t parameters</option>
+    <option value=""></option>
+    <option value="/belisariande-cgi/cgi">cgi parameters</option>
+    <option value="/belisariande-cgi/cgicatch">catch cgi parameters</option>
+    </select><br/>
+    Method: <select name="FormMethod">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
+    <option value=""></option>
+    </select><br/><br/>
+    <input type="submit" name="submit" value="submit"/><br/>
+    </div>
+</form>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+=====================================================================
+=== Copyright (c) 1988-2021 $organization$
+===
+=== This software is provided by the author and contributors ``as is'' 
+=== and any express or implied warranties, including, but not limited to, 
+=== the implied warranties of merchantability and fitness for a particular 
+=== purpose are disclaimed. In no event shall the author or contributors 
+=== be liable for any direct, indirect, incidental, special, exemplary, 
+=== or consequential damages (including, but not limited to, procurement 
+=== of substitute goods or services; loss of use, data, or profits; or 
+=== business interruption) however caused and on any theory of liability, 
+=== whether in contract, strict liability, or tort (including negligence 
+=== or otherwise) arising in any way out of the use of this software, 
+=== even if advised of the possibility of such damage.
+===
+===   File: Belisariande-omna-omna-create-html-form.html
+===
+=== Author: $author$
+===   Date: 3/31/2021
+=====================================================================
+-->
+<!--
+=====================================================================
+=== form
+=====================================================================
+-->
+<form name="Form" method="POST" action="../templates/t/html/html.t"
+ onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
+    <div class="form">
+
+    <b>&lt;?xml version="</b><input name="XmlVersion" value="1.0"/>[1.0]
+    <input type="checkbox" name="is_XmlVersion" value="no" unchecked="">no</input>
+    <b>" encoding="</b><input name="XmlEncoding" value="utf-8"/>[utf-8]
+    <input type="checkbox" name="is_XmlEncoding" value="no" unchecked="">no</input>
+    <b>"&gt;</b>
+    <input type="checkbox" name="is_Xml" value="no" unchecked="">no</input>
+    <br/>
+
+    <b>&lt;!--</b> File: <input name="File" value=""></input>[html][.html]
+     <input type="radio" name="Extension" value="html" checked="checked">.html</input>
+    <input type="radio" name="Extension" value="htm">.htm</input>
+    <input type="radio" name="Extension" value="">no</input>
+    <b>--&gt;</b>
+    <input type="checkbox" name="is_File" value="no" unchecked="">no</input>
+    <br/>
+
+    Template: <select name="FormTemplate">
+    <option value="../templates/t/html/html.t">.html file (../templates/t/html/html.t)</option>
+    <option value="../templates/t/html/omna-html.t">omna .html file(../templates/t/html/html.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/t/parameters.t">t parameters</option>
+    <option value="../templates/t/t/functions.t">t functions</option>
+    <option value=""></option>
+    <option value="/belisariande-cgi/cgi">cgi parameters</option>
+    <option value="/belisariande-cgi/cgicatch">catch cgi parameters</option>
+    </select>
+    <br/>
+    <br/>
+
+    <b>&lt;html&gt;</b>
+    <b>&lt;head&gt;</b>
+    <b>&lt;title&gt;</b><input name="Application" value=""/>[Application]
+    <b> - </b><input name="Page" value=""/>[Home]
+    <b>&lt;/title&gt;</b>
+    <br/>
+    <b>&lt;link</b>
+    <b> rel="</b>stylesheet<b>" href=&quot;</b><input name="Style_path" value=""/><b>/</b>
+    <input type="checkbox" name="is_Style_path" value="no" unchecked="">no</input>
+    <input name="Style_href" value=""/><b>&quot;</b>[[../css]/][Application[...].css]
+    <input type="checkbox" name="is_Style_href" value="no" unchecked="">no</input>
+    <b>&gt;</b><b>&lt;/link&gt;</b>
+    <input type="checkbox" name="is_Style_link" value="no" unchecked="">no</input>
+    <br/>
+    <b>&lt;style type=&quot;</b><input name="Style_type" value=""/><b>&quot;</b>[text/css]
+    <input type="checkbox" name="is_Style_type" value="no" unchecked="">no</input>
+    <b>&gt;</b><input name="Style_text" value=""/>
+    <input type="checkbox" name="is_Style_text" value="no" unchecked="">no</input>
+    <b>&lt;/style&gt;</b>
+    <input type="checkbox" name="is_Style" value="no" unchecked="">no</input>
+    <br/>
+    <b>&lt;script&gt;</b>
+    <b>&lt;/script&gt;</b>
+    <b>&lt;/head&gt;</b>
+    <br/>
+    <b>&lt;body&gt;</b>
+    <b>&lt;form&gt;</b>
+    <b>&lt;/form&gt;</b>
+    <b>&lt;/body&gt;</b>
+    <b>&lt;/html&gt;</b>
+    <br/>
+
+    <br/>
+    Content-Type: <select name="content_type">
+    <option value="text/plain">text</option>
+    <option value="text/html">html</option>
+    <option value="text/xml">xml</option>
+    <option value="application/json">json</option>
+    <option value="application/javascript">javascript</option>
+    <option value=""></option>
+    </select><br/>
+    Action: <select name="FormAction">
+    <option value="../templates/t/html/html.t">.html file (../templates/t/html/html.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/t/functions.t">t functions</option>
+    <option value="../templates/t/t/parameters.t">t parameters</option>
+    <option value=""></option>
+    <option value="/belisariande-cgi/cgi">cgi parameters</option>
+    <option value="/belisariande-cgi/cgicatch">catch cgi parameters</option>
+    </select><br/>
+    Method: <select name="FormMethod">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
+    <option value=""></option>
+    </select><br/><br/>
+    <input type="submit" name="submit" value="submit"/><br/>
+    </div>
+</form>

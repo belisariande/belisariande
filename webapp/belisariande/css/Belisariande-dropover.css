@@ -1,0 +1,73 @@
+/*
+**********************************************************************
+** Copyright (c) 1988-2021 $organization$     
+**
+** This software is provided by the author and contributors ``as is'' 
+** and any express or implied warranties, including, but not limited to, 
+** the implied warranties of merchantability and fitness for a particular 
+** purpose are disclaimed. In no event shall the author or contributors 
+** be liable for any direct, indirect, incidental, special, exemplary, 
+** or consequential damages (including, but not limited to, procurement 
+** of substitute goods or services; loss of use, data, or profits; or 
+** business interruption) however caused and on any theory of liability, 
+** whether in contract, strict liability, or tort (including negligence 
+** or otherwise) arising in any way out of the use of this software, 
+** even if advised of the possibility of such damage.
+**
+**   File: Belisariande-dropover.css
+**
+** Author: $author$           
+**   Date: 3/29/2021
+**********************************************************************
+*/
+
+/*
+** dropover
+** ...
+*/
+.dropover {
+     width: 64px;
+     height: 100%;
+     margin: auto;
+     border: 0px;
+     border-style: solid;
+     border-color: black;
+     border-spacing: 0px 0px;
+     text-align: center;
+     float: right;
+}
+.dropover-button {
+     margin: auto;
+     border: 0px;
+     border-style: solid;
+     border-color: black;
+     border-spacing: 0px 0px;
+     background-color: transparent;
+     cursor: pointer;
+}
+.dropover-button:hover, .dropover-button:focus {
+     outline: none;
+}
+.dropover-button:hover .dropover-bar, .dropover-button:focus .dropover-bar {
+     background-color: BlueViolet;
+}
+.dropover-bars {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 0px;
+    border-style: solid;
+    border-color: black;
+    border-spacing: 4px 4px;
+}
+.dropover-bar {
+     width: 6px;
+     height: 32px;
+     padding: 0px;
+     border-radius: 3px;
+     background-color: black;
+}
+/*
+** dropover
+** ...
+*/
