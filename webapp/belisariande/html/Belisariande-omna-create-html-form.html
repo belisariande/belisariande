@@ -59,20 +59,24 @@
     <br/>
     <br/>
 
-    <b>&lt;html&gt;</b>
-    <b>&lt;head&gt;</b>
+    <b>&lt;html&gt;</b><b>&lt;head&gt;</b>
+
     <b>&lt;title&gt;</b><input name="Application" value=""/>[Application]
+    <input type="checkbox" name="is_Application" value="no" unchecked="">no</input>
     <b> - </b><input name="Page" value=""/>[Home]
+    <input type="checkbox" name="is_Page" value="no" unchecked="">no</input>
     <b>&lt;/title&gt;</b>
+    <input type="checkbox" name="is_Title" value="no" unchecked="">no</input>
     <br/>
-    <b>&lt;link</b>
-    <b> rel="</b>stylesheet<b>" href=&quot;</b><input name="Style_path" value=""/><b>/</b>
+
+    <b>&lt;link rel="</b>stylesheet<b>" href=&quot;</b><input name="Style_path" value=""/><b>/</b>[../css]
     <input type="checkbox" name="is_Style_path" value="no" unchecked="">no</input>
-    <input name="Style_href" value=""/><b>&quot;</b>[[../css]/][Application[...].css]
+    <input name="Style_href" value=""/><b>&quot;</b>[Application[...].css]
     <input type="checkbox" name="is_Style_href" value="no" unchecked="">no</input>
     <b>&gt;</b><b>&lt;/link&gt;</b>
     <input type="checkbox" name="is_Style_link" value="no" unchecked="">no</input>
     <br/>
+
     <b>&lt;style type=&quot;</b><input name="Style_type" value=""/><b>&quot;</b>[text/css]
     <input type="checkbox" name="is_Style_type" value="no" unchecked="">no</input>
     <b>&gt;</b><input name="Style_text" value=""/>
@@ -80,15 +84,41 @@
     <b>&lt;/style&gt;</b>
     <input type="checkbox" name="is_Style" value="no" unchecked="">no</input>
     <br/>
-    <b>&lt;script&gt;</b>
+
+    <b>&lt;script type=&quot;</b><input name="Script_type" value=""/><b>&quot;</b>[text/javascript]
+    <input type="checkbox" name="is_Script_type" value="no" unchecked="">no</input><br/>
+    <b>&nbsp;&nbsp;src=&quot;</b><input name="Script_path" value=""/><b>/</b>[../js]
+    <input type="checkbox" name="is_Script_path" value="no" unchecked="">no</input>
+    <input name="Script_src" value=""/>&quot;
+    <input type="checkbox" name="is_Script_src" value="no" unchecked="">no</input>
+    </b>[Application[...].js]<b>&gt;</b><input name="Script_text" value=""/>
+    <input type="checkbox" name="is_Script_text" value="no" unchecked="">no</input>
     <b>&lt;/script&gt;</b>
-    <b>&lt;/head&gt;</b>
+    <input type="checkbox" name="is_Script" value="no" unchecked="">no</input>
     <br/>
-    <b>&lt;body&gt;</b>
-    <b>&lt;form&gt;</b>
-    <b>&lt;/form&gt;</b>
-    <b>&lt;/body&gt;</b>
-    <b>&lt;/html&gt;</b>
+    <b>&lt;/head&gt;</b>
+
+    <b>&lt;body class=&quot;</b><input name="Body_class" value=""/><b>&quot;</b>[class]
+    <input type="checkbox" name="is_Body_class" value="no" unchecked="">no</input>
+    <b>style=&quot;</b><input name="Body_style" value=""/><b>&quot;</b>
+    <input type="checkbox" name="is_Body_style" value="no" unchecked="">no</input>
+    <b>&gt;</b>
+    <input type="checkbox" name="is_Body" value="no" unchecked="">no</input>
+    <br/>
+
+    <b>&lt;form name=&quot;</b><input name="Form_name" value=""/><b>&quot;</b>[Form]
+    <input type="checkbox" name="is_Form_name" value="no" unchecked="">no</input>
+    <b>method=&quot;</b><input name="Form_method" value=""/><b>&quot;</b>[POST]
+    <input type="checkbox" name="is_Form_method" value="no" unchecked="">no</input>
+    <b>action=&quot;</b><input name="Form_action" value=""/><b>&quot;</b>
+    <input type="checkbox" name="is_Form_action" value="no" unchecked="">no</input>
+    <br/><b>&nbsp;&nbsp;onSubmit=&quot;</b><input name="Form_onSubmit" value=""/><b>&quot;</b>
+    <input type="checkbox" name="is_Form_onSubmit" value="no" unchecked="">no</input>
+    <b>&gt;</b>
+    <b>&lt;div&gt;</b><b>&lt;/div&gt;</b><b>&lt;/form&gt;</b>
+    <input type="checkbox" name="is_Form" value="no" unchecked="">no</input><br/>
+
+    <b>&lt;/body&gt;</b><b>&lt;/html&gt;</b>
     <br/>
 
     <br/>

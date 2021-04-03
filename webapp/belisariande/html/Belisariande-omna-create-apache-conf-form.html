@@ -15,10 +15,10 @@
 === or otherwise) arising in any way out of the use of this software, 
 === even if advised of the possibility of such damage.
 ===
-===   File: Belisariande-omna-create-bash-form.html
+===   File: Belisariande-omna-create-apache-conf-form.html
 ===
 === Author: $author$
-===   Date: 3/30/2021
+===   Date: 3/31/2021
 =====================================================================
 -->
 <!--
@@ -26,16 +26,12 @@
 === form
 =====================================================================
 -->
-<form name="Form" method="POST" action="../templates/t/bash/bash.t"
+<form name="Form" method="POST" action="../templates/t/Apache/httpd-conf.t"
  onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
     <div class="form">
 
-    File: <input name="File" value=""/>[bash]
-    <input type="checkbox" name="is_File" value="no" unchecked="">no</input>
-    <br/>
-
     Template: <select name="FormTemplate">
-    <option value="../templates/t/bash/bash.t">(../templates/t/bash/bash.t)</option>
+    <option value="../templates/t/Apache/httpd-conf.t">Apache httpd.conf file(../templates/t/Apache/httpd-conf.t)</option>
     <option value=""></option>
     <option value="../templates/t/t/parameters.t">t parameters</option>
     <option value="../templates/t/t/functions.t">t functions</option>
@@ -56,7 +52,7 @@
     <option value=""></option>
     </select><br/>
     Action: <select name="FormAction">
-    <option value="../templates/t/bash/bash.t">(../templates/t/bash/bash.t)</option>
+    <option value="../templates/t/Apache/httpd-conf.t">Apache httpd.conf file(../templates/t/Apache/httpd-conf.t)</option>
     <option value=""></option>
     <option value="../templates/t/t/functions.t">t functions</option>
     <option value="../templates/t/t/parameters.t">t parameters</option>
