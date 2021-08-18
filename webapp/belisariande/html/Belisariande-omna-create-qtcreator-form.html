@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+=====================================================================
+=== Copyright (c) 1988-2021 $organization$
+===
+=== This software is provided by the author and contributors ``as is'' 
+=== and any express or implied warranties, including, but not limited to, 
+=== the implied warranties of merchantability and fitness for a particular 
+=== purpose are disclaimed. In no event shall the author or contributors 
+=== be liable for any direct, indirect, incidental, special, exemplary, 
+=== or consequential damages (including, but not limited to, procurement 
+=== of substitute goods or services; loss of use, data, or profits; or 
+=== business interruption) however caused and on any theory of liability, 
+=== whether in contract, strict liability, or tort (including negligence 
+=== or otherwise) arising in any way out of the use of this software, 
+=== even if advised of the possibility of such damage.
+===
+===   File: Belisariande-omna-create-qtcreator-form.html
+===
+=== Author: $author$
+===   Date: 4/21/2021, 7/12/2021
+=====================================================================
+-->
+<!--
+=====================================================================
+=== form
+=====================================================================
+-->
+<form name="Form" method="POST" action="../templates/t/QtCreator/QtCreator-pri.t"
+ onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
+    <div class="form">
+
+    File: <input name="File" value=""/>[Framework{.pri | .pro}]
+    <input type="checkbox" name="is_File" value="no" unchecked="checked">no</input>
+    <br/>
+
+    Template: <select name="FormTemplate">
+    <option value="../templates/t/QtCreator/QtCreator-pri.t">QtCreator .pri file</option>
+    <option value="../templates/t/QtCreator/os-QtCreator-pri.t">Os QtCreator .pri file</option>
+    <option value="../templates/t/QtCreator/build-QtCreator-pri.t">Build QtCreator .pri file</option>
+    <option value="../templates/t/QtCreator/host-build-QtCreator-pri.t">Host Build QtCreator .pri file</option>
+    <option value=""></option>
+    <option value="../templates/t/QtCreator/library-QtCreator-pri.t">Library QtCreator .pri file</option>
+    <option value="../templates/t/QtCreator/os-library-QtCreator-pro.t">Os Library QtCreator .pro file</option>
+    <option value="../templates/t/QtCreator/os-library-QtCreator-config.t">Os Library QtCreator config</option>
+    <option value=""></option>
+    <option value="../templates/t/QtCreator/executable-QtCreator-pri.t">Executable QtCreator .pri file</option>
+    <option value="../templates/t/QtCreator/os-executable-QtCreator-pro.t">Os Executable QtCreator .pro file</option>
+    <option value="../templates/t/QtCreator/os-executable-QtCreator-config.t">Os Executable QtCreator config</option>
+    <option value=""></option>
+    <option value="../templates/t/QtCreator/shared-library-QtCreator-pri.t">Shared Library QtCreator .pri file</option>
+    <option value="../templates/t/QtCreator/os-shared-library-QtCreator-pro.t">Os Shared Library QtCreator .pro file</option>
+    <option value="../templates/t/QtCreator/os-shared-library-QtCreator-config.t">Os Shared Library QtCreator config</option>
+    <option value=""></option>
+    <option value="../templates/t/t/parameters.t">t parameters</option>
+    <option value="../templates/t/t/functions.t">t functions</option>
+    <option value=""></option>
+    <option value="/belisariande-cgi/cgi">cgi parameters</option>
+    <option value="/belisariande-cgi/cgicatch">catch cgi parameters</option>
+    </select>
+    <br/>
+    <br/>
+
+    Repository: <input name="Repository" value=""/>
+    <input type="checkbox" name="is_Repository" value="no" checked="checked">no</input>
+    <br/>
+    Framework: <input name="Framework" value=""/>[Framework]
+    <input type="checkbox" name="is_Framework" value="no" unchecked="checked">no</input>
+    <br/>
+    Depends: <input name="Depends" value=""/>[Depends]
+    <input type="checkbox" name="is_Depends" value="no" unchecked="checked">no</input>
+    <br/>
+    Target: <input name="Target" value=""/>[[{lib | slib}]%Framework%]
+    <input type="checkbox" name="is_Target" value="no" unchecked="checked">no</input>
+    <br/>
+    <b>include(../../../../../../build/QtCreator/%Framework%.pri)</b>
+    <input type="checkbox" name="is_Include_host_build" value="no" checked="checked">no</input>
+    <br/>
+    <br/>
+    Source: <input name="Source1" value=""/><select name="Source">
+    <option value=""></option>
+    <option value="source">source</option>
+    <option value="src">src</option>
+    </select>[source]
+    <input type="checkbox" name="is_Source" value="no" unchecked="checked">no</input>
+    <br/>
+    Include: <input name="Include1" value=""/><select name="Include">
+    <option value=""></option>
+    <option value="include">include</option>
+    <option value="src">inc</option>
+    </select>[include]
+    <input type="checkbox" name="is_Include" value="no" unchecked="checked">no</input>
+    <br/>
+    Os: <input name="Os1" value=""/><select name="Os">
+    <option value=""></option>
+    <option value="Linux">Linux</option>
+    <option value="MacOSX">MacOSX</option>
+    <option value="Windows">Windows</option>
+    </select>[os]
+    <input type="checkbox" name="is_Os" value="no" unchecked="checked">no</input>
+    <br/>
+    Uname: <input name="Uname1" value=""/><select name="Uname">
+    <option value=""></option>
+    <option value="Linux">Linux</option>
+    <option value="Darwin">Darwin</option>
+    <option value="Windows">Windows</option>
+    </select>[$$system(uname)]
+    <input type="checkbox" name="is_Uname" value="no" unchecked="checked">no</input>
+    <br/>
+    <b>LINUX_VERSION = </b><input name="Linux_version" value=""/>[$$system(uname -r)]
+    <input type="checkbox" name="is_Linux_version" value="no" unchecked="checked">no</input>
+    <br/>
+    <b>DARWIN_VERSION = </b><input name="Darwin_version" value=""/>[$$system(sw_vers -productVersion)]
+    <input type="checkbox" name="is_Darwin_version" value="no" unchecked="checked">no</input>
+    <br/>
+    <b>WINDOWS_VERSION = </b><input name="Windows_version" value=""/>[$$system(ver)]
+    <input type="checkbox" name="is_Windows_version" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <br/>
+    Organization: <input name="Organization" value=""/>[$organization$]
+    <input type="checkbox" name="is_Organization" value="no" unchecked="checked">no</input>
+    <br/>
+    Author: <input name="Author" value=""/>[$author$]
+    <input type="checkbox" name="is_Author" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <br/>
+    Content-Type: <select name="content_type">
+    <option value="text/plain">text</option>
+    <option value="text/html">html</option>
+    <option value="text/xml">xml</option>
+    <option value="application/json">json</option>
+    <option value="application/javascript">javascript</option>
+    <option value=""></option>
+    </select><br/>
+    Action: <select name="FormAction">
+    <option value="../templates/t/QtCreator/QtCreator-pri.t">(../templates/t/QtCreator/QtCreator-pri.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/t/functions.t">t functions</option>
+    <option value="../templates/t/t/parameters.t">t parameters</option>
+    <option value=""></option>
+    <option value="/belisariande-cgi/cgi">cgi parameters</option>
+    <option value="/belisariande-cgi/cgicatch">catch cgi parameters</option>
+    </select><br/>
+    Method: <select name="FormMethod">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
+    <option value=""></option>
+    </select><br/><br/>
+    <input type="submit" name="submit" value="submit"/><br/>
+    </div>
+</form>

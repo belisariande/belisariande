@@ -13,10 +13,10 @@
 %# or otherwise) arising in any way out of the use of this software, 
 %# even if advised of the possibility of such damage.
 %#
-%#   File: parameters.t
+%#   File: os-executable-QtCreator-config.t
 %#
 %# Author: $author$
-%#   Date: 3/30/2021
+%#   Date: 4/22/2021
 %########################################################################
 %with(%
 %is_include_path,%(%else-then(%is_include_path%,%(%is_Include_path%)%)%)%,%
@@ -24,24 +24,27 @@
 %Include_path,%(%else-then(%if-no(%is_include_path%,,%(%Include_path%)%)%,%(%if-no(%is_include_path%,,%(%include_path%)%)%)%)%)%,%
 %INCLUDE_PATH,%(%else-then(%INCLUDE_PATH%,%(%toupper(%Include_path%)%)%)%)%,%
 %include_path,%(%else-then(%_include_path%,%(%tolower(%Include_path%)%)%)%)%,%
-%is_parameters,%(%else-then(%is_parameters%,%(%is_Parameters%)%)%)%,%
-%parameters,%(%else-then(%if-no(%is_parameters%,,%(%parameters%)%)%,%(%if-no(%is_parameters%,,%(%parameters(,,;,,%(%name%%then-if(%value%,=)%)%,name,value)%)%)%)%)%)%,%
-%Parameters,%(%else-then(%if-no(%is_parameters%,,%(%Parameters%)%)%,%(%if-no(%is_parameters%,,%(%parameters%)%)%)%)%)%,%
-%PARAMETERS,%(%else-then(%PARAMETERS%,%(%toupper(%Parameters%)%)%)%)%,%
-%parameters,%(%else-then(%_parameters%,%(%tolower(%Parameters%)%)%)%)%,%
-%is_title,%(%else-then(%is_title%,%(%is_Title%)%)%)%,%
-%title,%(%else-then(%if-no(%is_title%,,%(%title%)%)%,%(%if-no(%is_title%,,%(Parameters:
-%%#   %parameters(,,%(
-%%#   )%,,%(%name% = "%value%")%,name,value)%)%)%)%)%)%,%
-%Title,%(%else-then(%if-no(%is_title%,,%(%Title%)%)%,%(%if-no(%is_title%,,%(%title%)%)%)%)%)%,%
-%TITLE,%(%else-then(%TITLE%,%(%toupper(%Title%)%)%)%)%,%
-%title,%(%else-then(%_title%,%(%tolower(%Title%)%)%)%)%,%
+%is_framework,%(%else-then(%is_framework%,%(%is_Framework%)%)%)%,%
+%framework,%(%else-then(%if-no(%is_framework%,,%(%framework%)%)%,%(%if-no(%is_framework%,,%(Framework)%)%)%)%)%,%
+%Framework,%(%else-then(%if-no(%is_framework%,,%(%Framework%)%)%,%(%if-no(%is_framework%,,%(%framework%)%)%)%)%)%,%
+%FRAMEWORK,%(%else-then(%FRAMEWORK%,%(%toupper(%Framework%)%)%)%)%,%
+%framework,%(%else-then(%_framework%,%(%tolower(%Framework%)%)%)%)%,%
+%is_target,%(%else-then(%is_target%,%(%is_Target%)%)%)%,%
+%target,%(%else-then(%if-no(%is_target%,,%(%target%)%)%,%(%if-no(%is_target%,,%(%Framework%)%)%)%)%)%,%
+%Target,%(%else-then(%if-no(%is_target%,,%(%Target%)%)%,%(%if-no(%is_target%,,%(%target%)%)%)%)%)%,%
+%TARGET,%(%else-then(%TARGET%,%(%toupper(%Target%)%)%)%)%,%
+%target,%(%else-then(%_target%,%(%tolower(%Target%)%)%)%)%,%
+%is_os,%(%else-then(%is_os%,%(%is_Os%)%)%)%,%
+%os,%(%else-then(%if-no(%is_os%,,%(%os%)%)%,%(%if-no(%is_os%,,%(Os)%)%)%)%)%,%
+%Os,%(%else-then(%if-no(%is_os%,,%(%Os%)%)%,%(%if-no(%is_os%,,%(%os%)%)%)%)%)%,%
+%OS,%(%else-then(%OS%,%(%toupper(%Os%)%)%)%)%,%
+%os,%(%else-then(%_os%,%(%tolower(%Os%)%)%)%)%,%
 %%(%
-%%include(%include_path%/file-t.t)%%
-%%%with%(()%%%
 %
-%%include(%include_path%/parameters-t.t)%%
-%%%%%%(()%%%
+%Framework%/build/%os%/QtCreator/Debug/bin/%Target%
+
+%Framework%/build/%os%/QtCreator/Release/bin/%Target%
+
+%Framework%/build/%os%/QtCreator/Profile/bin/%Target%
 %
-%%%%())%%%%())%%%%
 %)%)%

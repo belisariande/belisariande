@@ -29,8 +29,21 @@
 <form name="Form" method="POST" action="../templates/t/css/css.t"
  onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
     <div class="form">
+
+    <b></b>Application: <input name="Application" value=""></input>[Application]<b></b>
+    <input type="checkbox" name="is_Application" value="no" unchecked="checked">no</input>
+    <br/>
+
     Template: <select name="FormTemplate">
-    <option value="../templates/t/css/css.t">(../templates/t/css/css.t)</option>
+    <option value="../templates/t/css/css.t">.css file (../templates/t/css/css.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/css/Application-header-css.t">Application header .css file (../templates/t/css/Application-header-css.t)</option>
+    <option value="../templates/t/css/Application-footer-css.t">Application footer .css file (../templates/t/css/Application-footer-css.t)</option>
+    <option value="../templates/t/css/Application-dropdown-css.t">Application dropdown .css file (../templates/t/css/Application-dropdown-css.t)</option>
+    <option value="../templates/t/css/Application-popdown-css.t">Application popdown .css file (../templates/t/css/Application-popdown-css.t)</option>
+    <option value="../templates/t/css/Application-menubar-css.t">Application menubar .css file (../templates/t/css/Application-menubar-css.t)</option>
+    <option value="../templates/t/css/Application-logo-css.t">Application logo .css file (../templates/t/css/Application-logo-css.t)</option>
+    <option value="../templates/t/css/Application-css.t">Application .css file (../templates/t/css/Application-css.t)</option>
     <option value=""></option>
     <option value="../templates/t/t/parameters.t">t parameters</option>
     <option value="../templates/t/t/functions.t">t functions</option>

@@ -44,7 +44,9 @@
     <br/>
 
     Template: <select name="FormTemplate">
-    <option value="../templates/t/cxx/hxx-cxx.t">(../templates/t/cxx/hxx-cxx.t)</option>
+    <!--option value="/xthenode/templates/t/cxx/class-hxx-cxx.t">c++ class (../templates/t/cxx/class-hxx-cxx.t)</option-->
+    <option value="/xthenode/templates/t/cxx/hxx-cxx.t" selected="selected">c/c++ file (../templates/t/cxx/hxx-cxx.t)</option>
+    <option value="/xthenode/templates/t/cxx/h-c.t">c file (../templates/t/cxx/h-c.t)</option>
     <option value=""></option>
     <option value="../templates/t/t/parameters.t">t parameters</option>
     <option value="../templates/t/t/functions.t">t functions</option>
@@ -62,12 +64,91 @@
     <input type="checkbox" name="is_File_ifndef" value="no" unchecked=""/>no
     <br/>
 
-    <b>#include "</b><input name="Include" value=""/><b>"</b>[xos/base/Base][.%Extension%]
+    <b>#include "</b><input name="Include" value=""/><b>"</b>[xos/base/base][.%Extension%]
     <input type="checkbox" name="is_Include" value="no" unchecked=""/>no<br/>
     <b>#include &lt;</b><input name="Sys_include" value=""/><b>&gt;</b>[string]
     <input type="checkbox" name="is_Sys_include" value="no" checked="checked"/>no<br/>
     <br/>
             
+
+    <b>namespace</b> <input name="Namespace" value=""/>[xos] <b>{</b>
+    <input type="checkbox" name="is_Namespace" value="no" unchecked=""/>no<br/>
+
+    <!--br/>
+    <b>template &lt;</b> <input name="Template" value=""/><b>&gt;</b>
+    <input type="checkbox" name="is_Template" value="no" unchecked=""/>no
+    &nbsp;&nbsp;&nbsp;&nbsp;%Class%<select name="TemplateT">
+    <option value="T">T</option>
+    <option value="t" selected="selected">t</option>
+    <option value=""></option>
+    </select>
+    <input type="checkbox" name="is_TemplateT" value="no" unchecked=""/>no
+    <br/>
+
+    <b>class</b> <input name="Class" value=""/>[derived]
+    <input type="checkbox" name="is_Class" value="no" unchecked=""/>no
+    &nbsp;&nbsp;&nbsp;&nbsp;<b>typedef </b><select name="Typedef_derives">
+    <option value="Derives">Derives</option>
+    <option value="derives" selected="selected">derives</option>
+    <option value=""></option>
+    </select><b></b>
+    <input type="checkbox" name="is_Typedef_derives" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <b>: virtual public</b> <input name="Implements" value=""/>[implement]
+    <input type="checkbox" name="is_Implements" value="no" unchecked=""/>no
+    <b></b>&nbsp;&nbsp;&nbsp;&nbsp;<b>typedef </b><select name="Typedef_implements">
+    <option value="Implements">Implements</option>
+    <option value="implements" selected="selected">implements</option>
+    <option value=""></option>
+    </select><b></b>
+    <input type="checkbox" name="is_Typedef_implements" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <b>, public</b> <input name="Extends" value=""/>[Extend]
+    <input type="checkbox" name="is_Extends" value="no" unchecked=""/>no
+    <b></b>&nbsp;&nbsp;&nbsp;&nbsp;<b>typedef </b><select name="Typedef_extends">
+    <option value="Extends">Extends</option>
+    <option value="extends" selected="selected">extends</option>
+    <option value=""></option>
+    </select><b></b>
+    <input type="checkbox" name="is_Typedef_extends" value="no" unchecked="checked">no</input><b> {</b>
+    <br/>
+
+    <b></b><select name="Copy_constructor_access">
+    <option value="public">public</option>
+    <option value="protected">protected</option>
+    <option value="private">private</option>
+    </select><b>:</b>
+    <input type="checkbox" name="Copy_constructor" value="explicit" unchecked="checked"><b>explicit</b></input>
+    <b>&nbsp;&nbsp;(const &amp; </b>copy<b>) {}</b>
+    <input type="checkbox" name="is_Copy_constructor" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <b></b><select name="Constructor_access">
+    <option value="public">public</option>
+    <option value="protected">protected</option>
+    <option value="private">private</option>
+    </select><b>:</b>
+    <input type="checkbox" name="Constructor" value="explicit" unchecked="checked"><b>explicit</b></input>
+    <b>&nbsp;&nbsp;() {}</b>
+    <input type="checkbox" name="is_Constructor" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <b></b><select name="Destructor_access">
+    <option value="public">public</option>
+    <option value="protected">protected</option>
+    <option value="private">private</option>
+    </select><b>:</b>
+    <input type="checkbox" name="Destructor" value="virtual" checked="checked"><b>virtual</b></input>
+    <b>&nbsp;&nbsp;~() {}</b>
+    <input type="checkbox" name="is_Destructor" value="no" unchecked="checked">no</input>
+    <input type="hidden" name="is_is_Destructor" value="no" unchecked="checked"></input>
+    <br/>
+
+    <b>}; /// class</b><br/-->
+    <br/>
+    <b>} /// namespace</b><br/>
 
     <br/>
     Content-Type: <select name="content_type">

@@ -30,8 +30,14 @@
  onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
     <div class="form">
 
+    <b></b>Application: <input name="Application" value=""></input>[Application]<b></b>
+    <input type="checkbox" name="is_Application" value="no" unchecked="checked">no</input>
+    <br/>
+
     Template: <select name="FormTemplate">
-    <option value="../templates/t/js/js.t">(../templates/t/js/js.t)</option>
+    <option value="../templates/t/js/js.t">.js file (../templates/t/js/js.t)</option>
+    <option value=""></option>
+    <option value="../templates/t/js/application-js.t">Application .js file (../templates/t/js/application-js.t)</option>
     <option value=""></option>
     <option value="../templates/t/t/parameters.t">t parameters</option>
     <option value="../templates/t/t/functions.t">t functions</option>

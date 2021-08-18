@@ -13,10 +13,10 @@
 %# or otherwise) arising in any way out of the use of this software, 
 %# even if advised of the possibility of such damage.
 %#
-%#   File: parameters.t
+%#   File: omna-dropdown-html.t
 %#
 %# Author: $author$
-%#   Date: 3/30/2021
+%#   Date: 4/21/2021
 %########################################################################
 %with(%
 %is_include_path,%(%else-then(%is_include_path%,%(%is_Include_path%)%)%)%,%
@@ -24,24 +24,13 @@
 %Include_path,%(%else-then(%if-no(%is_include_path%,,%(%Include_path%)%)%,%(%if-no(%is_include_path%,,%(%include_path%)%)%)%)%)%,%
 %INCLUDE_PATH,%(%else-then(%INCLUDE_PATH%,%(%toupper(%Include_path%)%)%)%)%,%
 %include_path,%(%else-then(%_include_path%,%(%tolower(%Include_path%)%)%)%)%,%
-%is_parameters,%(%else-then(%is_parameters%,%(%is_Parameters%)%)%)%,%
-%parameters,%(%else-then(%if-no(%is_parameters%,,%(%parameters%)%)%,%(%if-no(%is_parameters%,,%(%parameters(,,;,,%(%name%%then-if(%value%,=)%)%,name,value)%)%)%)%)%)%,%
-%Parameters,%(%else-then(%if-no(%is_parameters%,,%(%Parameters%)%)%,%(%if-no(%is_parameters%,,%(%parameters%)%)%)%)%)%,%
-%PARAMETERS,%(%else-then(%PARAMETERS%,%(%toupper(%Parameters%)%)%)%)%,%
-%parameters,%(%else-then(%_parameters%,%(%tolower(%Parameters%)%)%)%)%,%
-%is_title,%(%else-then(%is_title%,%(%is_Title%)%)%)%,%
-%title,%(%else-then(%if-no(%is_title%,,%(%title%)%)%,%(%if-no(%is_title%,,%(Parameters:
-%%#   %parameters(,,%(
-%%#   )%,,%(%name% = "%value%")%,name,value)%)%)%)%)%)%,%
-%Title,%(%else-then(%if-no(%is_title%,,%(%Title%)%)%,%(%if-no(%is_title%,,%(%title%)%)%)%)%)%,%
-%TITLE,%(%else-then(%TITLE%,%(%toupper(%Title%)%)%)%)%,%
-%title,%(%else-then(%_title%,%(%tolower(%Title%)%)%)%)%,%
+%is_application,%(%else-then(%is_application%,%(%is_Application%)%)%)%,%
 %%(%
-%%include(%include_path%/file-t.t)%%
-%%%with%(()%%%
+%%include(%Include_path%/file-html.t)%%
+%<div id="myDropdown" class="dropdown-content">
+    <a class="dropdown-item" href="Belisariande-omna.html">Omna - all</a>
+    <a class="dropdown-item" href="Belisariande.html">home</a>
+    <a class="dropdown-item" href="..">/belisariande/</a>
+</div>
 %
-%%include(%include_path%/parameters-t.t)%%
-%%%%%%(()%%%
-%
-%%%%())%%%%())%%%%
 %)%)%

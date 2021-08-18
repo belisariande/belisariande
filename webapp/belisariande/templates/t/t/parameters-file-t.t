@@ -31,7 +31,7 @@
 %filetypeextension,%(%else-then(%_filetypeextension%,%(%tolower(%FileTypeExtension%)%)%)%)%,%
 %is_Parameters,%(%else-then(%is_Parameters%,%(%is_parameters%)%)%)%,%
 %Parameters,%(%else-then(%if-no(%is_Parameters%,,%(%Parameters%)%)%,%(%if-no(%is_Parameters%,,%
-%%(Year=%%year%(()%%())%%%;Date=%%date%(()%%())%%%;Organization=$organization$;Author=$author$;FileTypeExtension=%FileTypeExtension%;Name=%%FileTypeExtension%%%
+%%(Year=%%year%(()%%())%%%;Month=%%month%(()%%())%%%;Day=%%day%(()%%())%%%;Date=%%date%(()%%())%%%;Organization=$organization$;Author=$author$;FileTypeExtension=%FileTypeExtension%;Name=%%FileTypeExtension%%%
 %;File=%%else-then%(()%%%File%%%(,)%%%Name%%%())%%%%
 %;Base=%%else-then%(()%%%filebase%(()%%%File%%%())%%%%(,)%%%%(()%%%File%%%())%%%%())%%%%
 %;Extension=%%else-then%(()%%%fileextension%(()%%%File%%%())%%%%(,)%%%%(()%%%FileTypeExtension%%%())%%%%())%%%%

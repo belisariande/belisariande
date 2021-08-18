@@ -13,10 +13,10 @@
 %# or otherwise) arising in any way out of the use of this software, 
 %# even if advised of the possibility of such damage.
 %#
-%#   File: parameters.t
+%#   File: Application-footer-html.t
 %#
 %# Author: $author$
-%#   Date: 3/30/2021
+%#   Date: 8/17/2021
 %########################################################################
 %with(%
 %is_include_path,%(%else-then(%is_include_path%,%(%is_Include_path%)%)%)%,%
@@ -24,24 +24,16 @@
 %Include_path,%(%else-then(%if-no(%is_include_path%,,%(%Include_path%)%)%,%(%if-no(%is_include_path%,,%(%include_path%)%)%)%)%)%,%
 %INCLUDE_PATH,%(%else-then(%INCLUDE_PATH%,%(%toupper(%Include_path%)%)%)%)%,%
 %include_path,%(%else-then(%_include_path%,%(%tolower(%Include_path%)%)%)%)%,%
-%is_parameters,%(%else-then(%is_parameters%,%(%is_Parameters%)%)%)%,%
-%parameters,%(%else-then(%if-no(%is_parameters%,,%(%parameters%)%)%,%(%if-no(%is_parameters%,,%(%parameters(,,;,,%(%name%%then-if(%value%,=)%)%,name,value)%)%)%)%)%)%,%
-%Parameters,%(%else-then(%if-no(%is_parameters%,,%(%Parameters%)%)%,%(%if-no(%is_parameters%,,%(%parameters%)%)%)%)%)%,%
-%PARAMETERS,%(%else-then(%PARAMETERS%,%(%toupper(%Parameters%)%)%)%)%,%
-%parameters,%(%else-then(%_parameters%,%(%tolower(%Parameters%)%)%)%)%,%
-%is_title,%(%else-then(%is_title%,%(%is_Title%)%)%)%,%
-%title,%(%else-then(%if-no(%is_title%,,%(%title%)%)%,%(%if-no(%is_title%,,%(Parameters:
-%%#   %parameters(,,%(
-%%#   )%,,%(%name% = "%value%")%,name,value)%)%)%)%)%)%,%
-%Title,%(%else-then(%if-no(%is_title%,,%(%Title%)%)%,%(%if-no(%is_title%,,%(%title%)%)%)%)%)%,%
-%TITLE,%(%else-then(%TITLE%,%(%toupper(%Title%)%)%)%)%,%
-%title,%(%else-then(%_title%,%(%tolower(%Title%)%)%)%)%,%
+%is_application,%(%else-then(%is_application%,%(%is_Application%)%)%)%,%
+%application,%(%else-then(%if-no(%is_application%,,%(%application%)%)%,%(%if-no(%is_application%,,%(Application)%)%)%)%)%,%
+%Application,%(%else-then(%if-no(%is_application%,,%(%Application%)%)%,%(%if-no(%is_application%,,%(%application%)%)%)%)%)%,%
+%APPLICATION,%(%else-then(%APPLICATION%,%(%toupper(%Application%)%)%)%)%,%
+%application,%(%else-then(%_application%,%(%tolower(%Application%)%)%)%)%,%
+%is_base,%(%else-then(%is_base%,%(%is_Base%)%)%)%,%
+%base,%(%else-then(%if-no(%is_base%,,%(%base%)%)%,%(%if-no(%is_base%,,%(%Application%-footer)%)%)%)%)%,%
+%Base,%(%else-then(%if-no(%is_base%,,%(%Base%)%)%,%(%if-no(%is_base%,,%(%base%)%)%)%)%)%,%
+%BASE,%(%else-then(%BASE%,%(%toupper(%Base%)%)%)%)%,%
+%base,%(%else-then(%_base%,%(%tolower(%Base%)%)%)%)%,%
 %%(%
-%%include(%include_path%/file-t.t)%%
-%%%with%(()%%%
-%
-%%include(%include_path%/parameters-t.t)%%
-%%%%%%(()%%%
-%
-%%%%())%%%%())%%%%
+%%include(%Include_path%/file-html.t)%%
 %)%)%
